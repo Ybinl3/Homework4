@@ -46,21 +46,35 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         return movies.size();
     }
 
+    public void filterList(List<Movie> filterMovies) {
+        movies = filterMovies;
+        notifyDataSetChanged();
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView tvTitle;
         TextView tvOverview;
         ImageView ivPoster;
+        TextView tvAvg;
+        TextView tvReleaseDate;
+        TextView tvPop;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
+            tvAvg = itemView.findViewById(R.id.tvAvg);
+            tvReleaseDate = itemView.findViewById(R.id.tvDate);
+            tvPop = itemView.findViewById(R.id.tvPop);
         }
 
         public void bind(Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
+            tvAvg.setText(movie.getVoteAvg());
+            tvReleaseDate.setText(movie.getReleaseDate());
+            tvPop.setText(movie.getPopularity());
             String imageUrl;
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
                 imageUrl = movie.getBackdropPath();

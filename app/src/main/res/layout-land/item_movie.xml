@@ -34,9 +34,46 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="26dp"
         android:layout_toEndOf="@+id/ivPoster"
         android:shadowColor="#000000"
         android:textColor="#FFFFFF"
         tools:text="In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages." />
+
+    <TextView
+        android:id="@+id/tvAvg"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-1dp"
+        android:layout_toEndOf="@+id/ivPoster"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textColor="#FFFFFF"
+        tools:text="8.4" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-1dp"
+        android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="#FFFFFF"
+        tools:text="2021-03-24" />
+
+    <TextView
+        android:id="@+id/tvPop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="#FFFFFF"
+        tools:text="10365.529" />
 </RelativeLayout>
